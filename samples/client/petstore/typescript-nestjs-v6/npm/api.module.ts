@@ -1,0 +1,39 @@
+import { HttpService, HttpModule, Module, DynamicModule } from '@nestjs/common';
+import { Configuration } from './configuration';
+import { BASE_PATH } from './variables';
+
+import { PetService } from './api/pet.service';
+import { StoreService } from './api/store.service';
+import { UserService } from './api/user.service';
+
+@Module({
+  imports:      [ HttpModule ],
+  exports:      [
+    {
+        provide: 'BASE_PATH',
+        useValue: BASE_PATH
+    },
+    PetService,
+    StoreService,
+    UserService 
+  ],
+  providers: [
+    PetService,
+    StoreService,
+    UserService 
+  ]
+})
+export class ApiModule {
+    public static forRoot(configurationFactory: () => Configuration): DynamicModule {
+        return {
+            module: ApiModule,
+            providers: [ { provide: Configuration, useFactory: configurationFactory } ]
+        };
+    }
+
+    constructor( httpService: HttpService) {
+        if (!httpService) {
+            throw new Error('You need to import the {HttpModule in your AppModule!');
+        }
+    }
+}

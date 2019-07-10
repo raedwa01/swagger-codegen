@@ -60,7 +60,8 @@ public class OnlineGeneratorOptionsTest {
                 {new SwaggerOptionsProvider()}, {new SwaggerYamlOptionsProvider()},
                 {new SwiftOptionsProvider()}, {new TizenClientOptionsProvider()},
                 {new TypeScriptAngularClientOptionsProvider()},
-                {new TypeScriptNodeClientOptionsProvider()}, {new LumenServerOptionsProvider()}};
+                {new TypeScriptNodeClientOptionsProvider()}, {new LumenServerOptionsProvider()},
+                {new TypeScriptNestjsClientOptionsProvider()}};
     }
 
     @Test(dataProvider = OPTIONS_PROVIDER)
