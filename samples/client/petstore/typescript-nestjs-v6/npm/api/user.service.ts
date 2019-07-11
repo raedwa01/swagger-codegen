@@ -16,7 +16,7 @@ import { AxiosResponse } from 'axios';
 import { Observable }                                        from 'rxjs';
 import { User } from '../model/user';
 import { Configuration }                                     from '../configuration';
-import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
+import { COLLECTION_FORMATS }                     from '../variables';
 
 
 @Injectable()
@@ -93,7 +93,7 @@ export class UserService {
             }
         );
     }
-
+}
     /**
      * Creates list of users with given input array
      * 
@@ -137,7 +137,7 @@ export class UserService {
             }
         );
     }
-
+}
     /**
      * Creates list of users with given input array
      * 
@@ -181,7 +181,7 @@ export class UserService {
             }
         );
     }
-
+}
     /**
      * Delete user
      * This can only be done by the logged in user.
@@ -220,7 +220,7 @@ export class UserService {
             }
         );
     }
-
+}
     /**
      * Get user by user name
      * 
@@ -259,7 +259,7 @@ export class UserService {
             }
         );
     }
-
+}
     /**
      * Logs user into the system
      * 
@@ -312,7 +312,7 @@ export class UserService {
             }
         );
     }
-
+}
     /**
      * Logs out current logged in user session
      * 
@@ -346,7 +346,7 @@ export class UserService {
             }
         );
     }
-
+}
     /**
      * Updated user
      * This can only be done by the logged in user.
@@ -395,4 +395,4 @@ export class UserService {
             }
         );
     }
-
+}

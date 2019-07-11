@@ -17,7 +17,7 @@ import { Observable }                                        from 'rxjs';
 import { ApiResponse } from '../model/apiResponse';
 import { Pet } from '../model/pet';
 import { Configuration }                                     from '../configuration';
-import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
+import { COLLECTION_FORMATS }                     from '../variables';
 
 
 @Injectable()
@@ -104,7 +104,7 @@ export class PetService {
             }
         );
     }
-
+}
     /**
      * Deletes a pet
      * 
@@ -156,7 +156,7 @@ export class PetService {
             }
         );
     }
-
+}
     /**
      * Finds Pets by status
      * Multiple status values can be provided with comma separated strings
@@ -209,7 +209,7 @@ export class PetService {
             }
         );
     }
-
+}
     /**
      * Finds Pets by tags
      * Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
@@ -262,7 +262,7 @@ export class PetService {
             }
         );
     }
-
+}
     /**
      * Find pet by ID
      * Returns a single pet
@@ -306,7 +306,7 @@ export class PetService {
             }
         );
     }
-
+}
     /**
      * Update an existing pet
      * 
@@ -360,7 +360,7 @@ export class PetService {
             }
         );
     }
-
+}
     /**
      * Updates a pet in the store with form data
      * 
@@ -431,7 +431,7 @@ export class PetService {
             }
         );
     }
-
+}
     /**
      * uploads an image
      * 
@@ -504,4 +504,4 @@ export class PetService {
             }
         );
     }
-
+}
