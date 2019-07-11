@@ -52,7 +52,7 @@ In your Nestjs project:
 import { ApiModule } from '{{npmName}}';
 import { HttpModule } from '@nestjs/common';
 
-@NgModule({
+@Module({
     imports: [
         ApiModule,
         HttpModule
@@ -73,7 +73,7 @@ export function apiConfigFactory (): Configuration => {
   return new Configuration(params);
 }
 
-@NgModule({
+@Module({
     imports: [ ApiModule.forRoot(apiConfigFactory) ],
     declarations: [ AppComponent ],
     providers: [],
@@ -102,7 +102,7 @@ import { ApiModule } from 'my-api-path';
 import { ApiModule as OtherApiModule } from 'my-other-api-path';
 import { HttpModule } from '@nestjs/common';
 
-@NgModule({
+@Module({
   imports: [
     ApiModule,
     OtherApiModule,
@@ -130,7 +130,7 @@ or
 ```
 import { BASE_PATH } from '{{npmName}}';
 
-@NgModule({
+@Module({
     imports: [],
     declarations: [ AppComponent ],
     providers: [ provide: BASE_PATH, useValue: 'https://your-web-service.com' ],
@@ -155,7 +155,7 @@ In the src/app/app.module.ts:
 import { BASE_PATH } from '{{npmName}}';
 import { environment } from '../environments/environment';
 
-@NgModule({
+@Module({
   declarations: [
     AppComponent
   ],
